@@ -20,7 +20,9 @@ services:
       retries: 10
 
   backend:
-    build: ./backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
     container_name: device_sandbox_backend
     ports:
       - "8082:80"
@@ -37,6 +39,7 @@ services:
     networks:
       - device_network
     restart: unless-stopped
+
 
   frontend:
     build: ./frontend
