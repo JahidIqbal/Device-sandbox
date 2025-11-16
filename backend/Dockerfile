@@ -17,3 +17,4 @@ RUN chown -R www-data:www-data storage bootstrap/cache
 EXPOSE 9000
 
 CMD ["php-fpm"]
+# Updated for Render
